@@ -93,9 +93,11 @@ export const Wrapper = styled.div`
 
     .response-yes {
       color: green;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .response-no {
       color: red;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .button-container {

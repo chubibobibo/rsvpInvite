@@ -1,9 +1,12 @@
 import { Button } from "@material-tailwind/react";
-import Banner from "../components/Banner";
 
 import { Wrapper } from "../assets/wrappers/IndexWrapper.js";
 import { Form, useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
+
+import { toast } from "react-toastify";
+import { IndexContext } from "../context/IndexContextProvider.jsx";
 
 function Index() {
   const { guest } = useParams();
@@ -21,6 +24,9 @@ function Index() {
       return { ...prev, state: false, answer: "Non, je ne peux pas venir." };
     });
   };
+
+  const data = useContext(IndexContext);
+  console.log(data);
 
   /** state and handler to manage the input data and sending of form */
   const [inputData, setInputData] = useState({
@@ -53,7 +59,8 @@ function Index() {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
-      navigate("/thankyou");
+      toast.success("Merci pour ta reponse");
+      navigate(`/thankyou/${guest}`);
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -72,7 +79,7 @@ function Index() {
       </div>
       <Form method='POST' onSubmit={onSubmit}>
         <div className='form-container'>
-          <p>Hello {inputData.username}, peux-tu venir à mon anniversaire?</p>
+          <p>Hello {guest.toUpperCase()}, peux-tu venir à mon anniversaire?</p>
           <div className='response-container'>
             <p
               className={
@@ -108,7 +115,7 @@ function Index() {
             <p>response {inputData.response}</p> */}
           </div>
           <div className='submit-btn'>
-            <Button type='submit'>Envoyer</Button>
+            <Button type='submit'>Envoyer ma reponse</Button>
           </div>
         </div>
       </Form>
