@@ -1,7 +1,7 @@
 function Banner() {
   return (
     <>
-      <img src='' alt='' />
+      <img src='./src/assets/banner.png' alt='' />
     </>
   );
 }
