@@ -69,13 +69,13 @@ function Index() {
   return (
     <Wrapper>
       <div className='img-container'>
-        <img src='./src/assets/banner1.png' alt='' />
+        <img src='../src/assets/banner1.png' alt='' />
       </div>
       <div className='logo-container'>
-        <img src='./src/assets/logo.png' alt='' />
+        <img src='../src/assets/logo.png' alt='' className='image-9' />
       </div>
       <div className='content-container'>
-        <img src='./src/assets/content.png' alt='' className='content-image' />
+        <img src='../src/assets/content.png' alt='' className='content-image' />
       </div>
       <Form method='POST' onSubmit={onSubmit}>
         <div className='form-container'>
