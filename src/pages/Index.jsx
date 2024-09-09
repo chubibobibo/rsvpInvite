@@ -93,7 +93,9 @@ function Index() {
       </div>
       <Form method='POST' onSubmit={onSubmit}>
         <div className='form-container'>
-          <p>Hello {guest.toUpperCase()},</p>
+          <p>
+            Hello <span className='text-blue-600'>{guest.toUpperCase()}</span>,
+          </p>
           <p> peux-tu venir à mon anniversaire?</p>
           <div className='response-container'>
             <p className={resp.state === true ? "response-yes" : "response-no"}>
