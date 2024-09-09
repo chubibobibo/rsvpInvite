@@ -15,20 +15,21 @@ function Index() {
   const navigate = useNavigate();
 
   /** state and handlers to manage the response */
-  const [response, setResponse] = useState({ state: false, answer: "" });
+  const [resp, setResp] = useState({ state: false, answer: "" });
+  console.log(resp.answer);
   const responseY = () => {
-    setResponse((prev) => {
+    setResp((prev) => {
       return { ...prev, state: true, answer: "Oui, je viens à ta fête!" };
     });
   };
   const responseN = () => {
-    setResponse((prev) => {
+    setResp((prev) => {
       return { ...prev, state: false, answer: "Non, je ne peux pas venir." };
     });
   };
 
   const data = useContext(IndexContext);
-  console.log(data);
+  // console.log(data);
 
   /** state and handler to manage the input data and sending of form */
   const [inputData, setInputData] = useState({
@@ -46,6 +47,11 @@ function Index() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    if (resp.answer === "") {
+      return toast.error(
+        "Vous devez choisir une réponse et appuyer sur envoyer"
+      );
+    }
     setResult("Sending....");
     const formData = new FormData(event.target);
 
@@ -62,7 +68,7 @@ function Index() {
       setResult("Form Submitted Successfully");
       event.target.reset();
       toast.success("Votre réponse a été envoyée");
-      navigate(`/thankyou/${guest}`);
+      navigate(`/thankyou/${guest}`, { replace: true });
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -79,21 +85,13 @@ function Index() {
       <div className='content-container'>
         <img src='./content.png' alt='' className='content-image' />
       </div>
-      {/* <div className='location'>
-        <p>Location: </p>
-        <Link to={googleLink}>HAPIK SALLE D'ESCALADE</Link>
-      </div> */}
       <Form method='POST' onSubmit={onSubmit}>
         <div className='form-container'>
           <p>Hello {guest.toUpperCase()},</p>
           <p> peux-tu venir à mon anniversaire?</p>
           <div className='response-container'>
-            <p
-              className={
-                response.state === true ? "response-yes" : "response-no"
-              }
-            >
-              {response.answer}
+            <p className={resp.state === true ? "response-yes" : "response-no"}>
+              {resp.answer}
             </p>
           </div>
           <div className='button-container'>
@@ -114,9 +112,10 @@ function Index() {
             <input
               type='text'
               name='response'
-              value={response.answer}
-              placeholder={response.answer}
+              value={resp.answer}
+              // placeholder={response.answer}
               onChange={handleChange}
+              // required
             />
             {/* <p>username {inputData.username}</p>
             <p>response {inputData.response}</p> */}
