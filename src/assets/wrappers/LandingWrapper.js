@@ -27,9 +27,13 @@ export const Wrapper = styled.div`
   @media only screen and (min-width: 390px) {
     .header {
       margin-top: 0;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
 
       h1 {
         font-size: 28px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
     }
     .card-container {
