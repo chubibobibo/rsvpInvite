@@ -16,19 +16,11 @@ function App() {
     },
     {
       path: "/:guest",
-      element: (
-        <IndexContextProvider>
-          <Index />
-        </IndexContextProvider>
-      ),
+      element: <Index />,
     },
     {
       path: "/thankyou/:guest",
-      element: (
-        <IndexContextProvider>
-          <ThankYouPage />
-        </IndexContextProvider>
-      ),
+      element: <ThankYouPage />,
     },
   ]);
   return <RouterProvider router={router} />;
