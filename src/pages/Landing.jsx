@@ -10,11 +10,17 @@ import {
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Landing() {
   const navigate = useNavigate();
   const [guestName, setGuestName] = useState("");
   const handleClick = () => {
+    if (guestName === "") {
+      return toast.error(
+        "Vous devez sélectionner le nom de votre enfant puis appuyer sur envoyer"
+      );
+    }
     navigate(`/${guestName}`);
   };
 
