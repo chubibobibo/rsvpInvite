@@ -1,18 +1,24 @@
 import { Button } from "@material-tailwind/react";
 
 import { Wrapper } from "../assets/wrappers/IndexWrapper.js";
-import { Form, useParams, useNavigate, Link } from "react-router-dom";
+import { Form, useParams, useNavigate, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 
 import { toast } from "react-toastify";
 import { IndexContext } from "../context/IndexContextProvider.jsx";
 
+import { allowedUsers } from "../utils/allowedUsers.js";
 const banner = "../banner1.png";
 
 function Index() {
   const { guest } = useParams();
   const navigate = useNavigate();
+
+  /** check if params include allowed users */
+  if (!allowedUsers.includes(guest)) {
+    return <Navigate to='/error/error' />;
+  }
 
   /** state and handlers to manage the response */
   const [resp, setResp] = useState({ state: false, answer: "" });
