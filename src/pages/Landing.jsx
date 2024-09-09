@@ -24,7 +24,8 @@ function Landing() {
         {/* <img src='./src/assets/climbing.jpg' alt='' className='image' /> */}
       </div>
       <div className='header'>
-        <h1>Bienvenue,</h1>
+        <h1>Confirmation pour la fête </h1>
+        <h1>d'anniversaire de Samuel </h1>
       </div>
       <div className='card-container'>
         <Card className='cardElem'>
