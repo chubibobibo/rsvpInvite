@@ -48,11 +48,11 @@ function Landing() {
               <Option value='Nassim'>Nassim</Option>
               <Option value='Dylan'>Dylan</Option>
               <Option value='Naël'>Naël</Option>
-              <Option value='Hiran'>Hiran</Option>
+              <Option value='Jimmy'>Jimmy</Option>
               <Option value='Harouna'>Harouna</Option>
               <Option value='Omar'>Omar</Option>
             </Select>
-            <Button onClick={handleClick}> Envoyer</Button>
+            <Button onClick={handleClick}>Envoyer</Button>
           </CardBody>
         </Card>
       </div>

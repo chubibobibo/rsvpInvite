@@ -3,7 +3,7 @@ export const allowedUsers = [
   "Massil",
   "Nassim",
   "Naël",
-  "Hiran",
+  "Jimmy",
   "Harouna",
   "Dylan",
   "Omar",
