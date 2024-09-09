@@ -2,12 +2,7 @@ import { Wrapper } from "../assets/wrappers/LandingWrapper";
 
 import {
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
-  Typography,
-  Input,
-  Checkbox,
   Button,
   Select,
   Option,
@@ -26,7 +21,7 @@ function Landing() {
   return (
     <Wrapper>
       <div className='image-container'>
-        <img src='./src/assets/climbing.jpg' alt='' className='image' />
+        {/* <img src='./src/assets/climbing.jpg' alt='' className='image' /> */}
       </div>
       <div className='header'>
         <h1>Bienvenue,</h1>
