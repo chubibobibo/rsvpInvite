@@ -57,7 +57,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
-    /* margin-bottom: 20%; */
 
     .invForm {
       display: none;

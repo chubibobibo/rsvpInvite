@@ -23,6 +23,9 @@ export const Wrapper = styled.div`
     margin-top: 5%;
     width: 80%;
   }
+  .cardElem {
+    width: 100%;
+  }
 
   @media only screen and (min-width: 390px) {
     .header {
