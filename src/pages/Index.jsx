@@ -1,12 +1,14 @@
 import { Button } from "@material-tailwind/react";
 
 import { Wrapper } from "../assets/wrappers/IndexWrapper.js";
-import { Form, useParams, useNavigate } from "react-router-dom";
+import { Form, useParams, useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 
 import { toast } from "react-toastify";
 import { IndexContext } from "../context/IndexContextProvider.jsx";
+
+const banner = "../banner1.png";
 
 function Index() {
   const { guest } = useParams();
@@ -59,7 +61,7 @@ function Index() {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
-      toast.success("Merci pour ta reponse");
+      toast.success("Votre réponse a été envoyée");
       navigate(`/thankyou/${guest}`);
     } else {
       console.log("Error", data);
@@ -69,17 +71,22 @@ function Index() {
   return (
     <Wrapper>
       <div className='img-container'>
-        <img src='../src/assets/banner1.png' alt='' />
+        <img src={banner} alt='' />
       </div>
       <div className='logo-container'>
-        <img src='../src/assets/logo.png' alt='' className='image-9' />
+        <img src='./logo.png' alt='' className='image-9' />
       </div>
       <div className='content-container'>
-        <img src='../src/assets/content.png' alt='' className='content-image' />
+        <img src='./content.png' alt='' className='content-image' />
       </div>
+      {/* <div className='location'>
+        <p>Location: </p>
+        <Link to={googleLink}>HAPIK SALLE D'ESCALADE</Link>
+      </div> */}
       <Form method='POST' onSubmit={onSubmit}>
         <div className='form-container'>
-          <p>Hello {guest.toUpperCase()}, peux-tu venir à mon anniversaire?</p>
+          <p>Hello {guest.toUpperCase()},</p>
+          <p> peux-tu venir à mon anniversaire?</p>
           <div className='response-container'>
             <p
               className={
