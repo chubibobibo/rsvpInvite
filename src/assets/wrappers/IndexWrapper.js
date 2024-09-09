@@ -57,6 +57,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
+    /* margin-bottom: 20%; */
 
     .invForm {
       display: none;
@@ -109,7 +110,7 @@ export const Wrapper = styled.div`
       grid-area: "form";
       border: 2px solid lightgray;
       z-index: 0;
-      transform: translate(0, -600%);
+      transform: translate(0, 40%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -192,6 +193,7 @@ export const Wrapper = styled.div`
       border-radius: 10px;
       width: 100%;
       height: 20rem;
+      margin-bottom: 5%;
 
       .invForm {
         display: none;
@@ -441,7 +443,7 @@ export const Wrapper = styled.div`
       grid-area: "content";
       border: 2px solid lightgray;
       z-index: 0;
-      transform: translate(20%, -10%);
+      transform: translate(20%, 10%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -498,7 +500,7 @@ export const Wrapper = styled.div`
       /* grid-area: "content"; */
       border: 2px solid lightgray;
       /* z-index: 0; */
-      transform: translate(-20%, 70%);
+      transform: translate(-20%, 80%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -555,7 +557,7 @@ export const Wrapper = styled.div`
       /* grid-area: "content"; */
       border: 2px solid lightgray;
       /* z-index: 0; */
-      transform: translate(-20%, 140%);
+      transform: translate(-20%, 145%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -567,7 +569,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: 2200px) {
+  @media only screen and (min-width: 2180px) {
     /* position: relative; */
     width: 100%;
     display: flex;
@@ -612,7 +614,7 @@ export const Wrapper = styled.div`
       /* grid-area: "content"; */
       border: 2px solid lightgray;
       /* z-index: 0; */
-      transform: translate(-20%, 150%);
+      transform: translate(-20%, 155%);
       display: flex;
       justify-content: center;
       align-items: center;
