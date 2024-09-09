@@ -101,10 +101,10 @@ function Index() {
             </p>
           </div>
           <div className='button-container'>
-            <Button size='sm' onClick={responseY}>
+            <Button size='md' onClick={responseY}>
               OUI
             </Button>
-            <Button size='sm' onClick={responseN}>
+            <Button size='md' onClick={responseN}>
               NON
             </Button>
           </div>
@@ -127,7 +127,9 @@ function Index() {
             <p>response {inputData.response}</p> */}
           </div>
           <div className='submit-btn'>
-            <Button type='submit'>Envoyer ma reponse</Button>
+            <Button type='submit' size='lg'>
+              Envoyer ma reponse
+            </Button>
           </div>
         </div>
       </Form>

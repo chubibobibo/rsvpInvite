@@ -64,12 +64,12 @@ export const Wrapper = styled.div`
     }
 
     p {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .response-container {
       margin-top: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .response-yes {
@@ -110,8 +110,8 @@ export const Wrapper = styled.div`
       grid-area: "form";
       border: 2px solid lightgray;
       z-index: 0;
-      transform: translate(0, 40%);
-      display: flex;
+      transform: translate(0%, 60%);
+      /* display: flex; */
       justify-content: center;
       align-items: center;
       flex-direction: column;
