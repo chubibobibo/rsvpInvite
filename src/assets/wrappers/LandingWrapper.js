@@ -16,6 +16,10 @@ export const Wrapper = styled.div`
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
   margin-top: 0;
 
+  /* .header {
+    margin-top: 30%;
+  } */
+
   .card-container {
     display: flex;
     justify-content: center;
@@ -25,6 +29,16 @@ export const Wrapper = styled.div`
   }
   .cardElem {
     width: 100%;
+    /* overflow-y: scroll; */
+
+    /* .name-selection {
+      overflow-y: scroll;
+    }
+
+    .name-options {
+      max-height: 3rem;
+      overflow-y: scroll;
+    } */
   }
 
   @media only screen and (min-width: 390px) {
@@ -41,7 +55,6 @@ export const Wrapper = styled.div`
     }
     .card-container {
       width: 100%;
-
       margin-top: 2%;
       margin-bottom: 20%;
     }
